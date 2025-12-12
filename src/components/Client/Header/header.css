@@ -1,0 +1,237 @@
+/* ===================== GLOBAL CONTAINER ===================== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;            /* sát phải hơn */
+}
+
+/* ===================== TOP BAR ===================== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* toàn bộ căn giữa */
+  gap: 34px;                  /* spacing chuẩn Joygreen */
+  padding: 16px 0;
+  background: white;
+}
+
+/* LOGO */
+.logo {
+  height: 54px;
+  flex-shrink: 0;
+}
+
+/* SOCIAL ICONS */
+.social-box {
+  display: flex;
+  gap: 12px;
+}
+
+.circle-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .25s ease;
+}
+
+.circle-icon:hover {
+  background: #e8e8e8;
+}
+
+/* INFO BOX (Hotline / Email / Address) */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-icon {
+  font-size: 20px;
+  color: #62c071;
+  margin-top: 3px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.info-title {
+  font-size: 12px;
+  color: #777;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ADDRESS 2 dòng */
+.address-box .info-text {
+  max-width: 240px;
+  line-height: 1.2;
+}
+
+/* ===================== NAVIGATION WRAPPER ===================== */
+.nav-wrapper {
+  background: #f6f4ec;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+/* NAV BAR ROW */
+.nav-bar {
+  position: relative;
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+/* MENU CĂN GIỮA TUYỆT ĐỐI */
+.menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 28px;
+  white-space: nowrap;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: .25s;
+}
+
+.menu a:hover {
+  color: #62c071;
+}
+
+/* DROPDOWN ARROW */
+.menu a.dropdown {
+  padding-right: 10px;
+  position: relative;
+}
+
+.menu a.dropdown::after {
+  content: "▾";
+  font-size: 11px;
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-48%);
+}
+
+/* ===================== RIGHT ACTION ICONS ===================== */
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;      /* sát nhau hơn */
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #444;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.action-icon {
+  margin-top: 4px;   /* ⭐ kéo xuống cho thẳng với User */
+}
+
+.nav-icon:hover {
+  color: #62c071;
+}
+
+/* ===================== USER DROPDOWN ===================== */
+/* Vùng chứa dropdown */
+.user-area {
+  position: relative;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 160px;
+  background: white;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  z-index: 9999;
+  animation: fadeIn .2s ease;
+}
+
+/* ITEM CHUNG CHO Link & Span */
+.user-dropdown .dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+
+  /* ⭐ FIX LỆCH FONT giữa <a> và <span> */
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  user-select: none;
+}
+
+.user-dropdown .dropdown-item:hover {
+  background: #eef7ee;
+  color: #62c071;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.user-name span {
+  font-size: 15px;
+}
+/* USER DISPLAY (icon + tên user) */
+.user-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+.user-display:hover {
+  background: #f2f2f2;
+}
+
+/* TEXT NAME */
+.user-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;          
+  display: flex;
+  align-items: center;     
+  color: #333;
+}
+
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

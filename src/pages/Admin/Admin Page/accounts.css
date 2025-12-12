@@ -1,0 +1,191 @@
+/* ================================
+   PAGE TITLE
+================================ */
+.admin-title {
+  margin-left: 260px;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d1a36;
+}
+
+/* ================================
+   PAGE CONTAINER
+================================ */
+.admin-container {
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(100% - 260px);
+  box-sizing: border-box;
+}
+
+/* ================================
+   TABLE
+================================ */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.admin-table th {
+  background: #eef2f8;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34495e;
+  border-bottom: 1px solid #dfe6ef;
+  text-align: left;
+}
+
+/* CELLS */
+.admin-table td {
+  padding: 18px;
+  font-size: 15px;
+  color: #2c3e50;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+/* HOVER */
+.admin-table tr:hover td {
+  background: #f8fbff;
+  transition: 0.2s;
+}
+
+/* REMOVE LAST BORDER */
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================
+   ROLE TAG
+================================ */
+.role-tag {
+  background: #4b67ff;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(75, 103, 255, 0.25);
+}
+
+/* ================================
+   PAGINATION
+================================ */
+.pagination {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd3df;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #34495e;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: #4b67ff;
+  color: #4b67ff;
+}
+
+.pagination .active {
+  background: #4b67ff;
+  color: white;
+  border-color: #4b67ff;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ================================
+   TOAST
+================================ */
+.toast-wrapper {
+  z-index: 9999;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.toast-item {
+  background: white;
+  width: 300px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  border-left: 5px solid #ff4d4f;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out,
+             fadeOut 0.4s ease-in 2.6s forwards;
+}
+
+.toast-icon {
+  font-size: 20px;
+  color: #ff4d4f;
+  margin-right: 10px;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d4380d;
+}
+
+.toast-desc {
+  font-size: 14px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.toast-close {
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+}

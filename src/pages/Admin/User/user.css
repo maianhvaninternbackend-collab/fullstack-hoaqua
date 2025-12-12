@@ -1,0 +1,179 @@
+/* ================================
+   USER PAGE
+================================ */
+
+/* Container */
+.user-container {
+  margin-left: 260px;              /* né sidebar */
+  padding: 24px 24px 40px;
+  width: calc(100% - 260px);
+  box-sizing: border-box;
+}
+
+/* Title */
+.user-container h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0d1a36;
+}
+
+/* ================================
+   TABLE
+================================ */
+.user-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 14px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.user-table thead th {
+  background: #f1f5fb;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c3e50;
+  border-bottom: 1px solid #e4ebf3;
+  text-align: left;
+}
+
+/* Body */
+.user-table tbody td {
+  padding: 18px;
+  font-size: 15px;
+  color: #2c3e50;
+  border-bottom: 1px solid #f1f3f7;
+}
+
+.user-table tbody tr:hover td {
+  background: #f8fbff;
+}
+
+.user-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================
+   ROLE TAG
+================================ */
+.role-tag {
+  display: inline-block;
+  background: #5865f2;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(88, 101, 242, 0.35);
+}
+
+/* ================================
+   PAGINATION
+================================ */
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #dbe3ee;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #34495e;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
+.pagination .active {
+  background: #5865f2;
+  color: #fff;
+  border-color: #5865f2;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ================================
+   TOAST
+================================ */
+.toast-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast-item {
+  width: 300px;
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  display: flex;
+  border-left: 5px solid #ff4d4f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out,
+             fadeOut 0.4s ease-in 2.6s forwards;
+}
+
+.toast-icon {
+  font-size: 20px;
+  color: #ff4d4f;
+  margin-right: 10px;
+}
+
+.toast-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d4380d;
+}
+
+.toast-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.toast-close {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}

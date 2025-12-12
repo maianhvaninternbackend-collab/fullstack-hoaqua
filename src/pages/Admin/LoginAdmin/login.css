@@ -1,0 +1,183 @@
+/* ================= BACKGROUND ================= */
+.admin-login-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(145deg, #051429, #0b2342, #051423);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= CARD ================= */
+.admin-login-card {
+  width: 420px;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 170, 255, 0.35);
+  border-radius: 26px;
+  box-shadow: 0 0 35px rgba(0, 170, 255, 0.28);
+  backdrop-filter: blur(14px);
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* ================= ICON CIRCLE ================= */
+.admin-icon-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.admin-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #00c3ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #00c3ff;
+  font-size: 36px;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.6);
+}
+
+/* ================= FORM ================= */
+.admin-login-form {
+  width: 100%;
+}
+
+/* Input Box */
+.admin-input {
+  position: relative;
+  width: 100%;
+  height: 48px;               /* bằng chiều cao button */
+  margin-bottom: 18px;
+}
+
+.admin-input input {
+  width: 100%;
+  height: 100%;
+  padding-left: 42px;
+  padding-right: 42px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(0, 170, 255, 0.4);
+  border-radius: 10px;        /* giống button */
+  color: white;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;     /* quan trọng để giữ kích thước */
+}
+
+.admin-input input:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.7);
+}
+
+/* Icons inside input */
+.admin-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #00c3ff;
+  font-size: 18px;
+}
+
+/* Show/Hide icon */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ddd;
+  font-size: 18px;
+}
+
+/* ================= ERROR TEXT ================= */
+.admin-error {
+  font-size: 13px;
+  color: #ff6d6d;
+  margin-top: -12px;
+  margin-bottom: 10px;
+}
+
+/* ================= REMEMBER + FORGOT ================= */
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  color: #c8d2df;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+.remember-row a {
+  color: #7da8ff;
+  text-decoration: none;
+}
+
+.remember-row a:hover {
+  text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+.admin-login-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #006aff, #00c3ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+  box-shadow: 0 0 15px rgba(0, 160, 255, 0.4);
+}
+
+.admin-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(0, 180, 255, 0.7);
+}
+.admin-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.admin-toast.success {
+  background: #28c76f;
+}
+
+.admin-toast.error {
+  background: #ff4d4f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
